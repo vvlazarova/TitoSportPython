@@ -1,0 +1,266 @@
+
+/* 2ed section Carousel Gallery and text*/
+
+.carousel-gallery {
+  margin: 50px 0;
+  padding: 0 30px;
+}
+.carousel-gallery .swiper-slide a {
+  display: block;
+  width: 100%;
+  height: 200px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: 3px 2px 20px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 2px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 2px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.carousel-gallery .swiper-slide a:hover .image .overlay {
+  opacity: 1;
+}
+.carousel-gallery .swiper-slide a .image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+.carousel-gallery .swiper-slide a .image .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.8);
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.carousel-gallery .swiper-slide a .image .overlay em {
+  color: #fff;
+  font-size: 26px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: inline-block;
+}
+.carousel-gallery .swiper-pagination {
+  position: relative;
+  bottom: auto;
+  text-align: center;
+  margin-top: 25px;
+}
+.carousel-gallery .swiper-pagination .swiper-pagination-bullet {
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.carousel-gallery .swiper-pagination .swiper-pagination-bullet:hover {
+  opacity: 0.7;
+}
+.carousel-gallery .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #17C71A;
+  transform: scale(1.1, 1.1);
+}
+
+/*# Carousel Gallery*/
+.plugins {
+  text-align: center;
+}
+.plugins h3 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: #111;
+}
+.plugins a {
+  display: inline-block;
+  font-family: Arial;
+  color: #777;
+  font-size: 14px;
+  margin: 10px;
+  transition: all 0.2s linear;
+}
+.plugins a:hover {
+  color: #17C71A;
+}
+
+/* 3th section - cards*/
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #17C71A;
+    border-color: #17C71A;
+}
+
+
+section .section-title {
+    text-align:center;
+    color: #17C71A ;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#activity .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    transform: rotateY(-180deg);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    backface-visibility: hidden;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #17C71A;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color:#17C71A;
+}
+
+.frontside .card .card-body img {
+    width: 230px;
+    height: 180px;
+    border-radius: 0;
+}
+
+
+.title {
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.card-block {
+  font-size: 1em;
+  position: relative;
+  margin: 0;
+  padding: 1em;
+  border: none;
+  border-top: 1px solid rgba(34, 36, 38, 0.1);
+  box-shadow: none;
+}
+.card {
+  font-size: 1em;
+  overflow: hidden;
+  border: none;
+  border-radius: 0.28571429rem;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  margin-top: 20px;
+}
+
+
+/* section- recovery */
+
+.backround {
+  background: url("b3.jpg");
+  padding: 25px;
+  background-repeat: no-repeat;
+  background-size: 1600px 680px;
+
+}
+.red{
+  color: rgb(255, 11, 11);
+  font-size: 2.9vmin;;
+  background-color: rgb(194, 205, 206);
+}
+
+.recovery {
+  color: white;
+  font-size: 3.4vmin;
+
+}
+
+.card-text{
+  font-size: 2.1vmin;;
+}
+
+
+/*Media queries */
+
+
+@media only screen and (max-width: 800px)
+{   #blogCarousel {    
+display:none;   }
+}
+
+
+@media only screen and (max-width: 800px) {
+.flip-card {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .carousel{
+    height: 550px;
+  }
+  }
+
+  @media only screen and (max-width: 600px){
+    .button{
+      font-size: 100%;
+    }
+    }
+  
+
+@media only screen and (max-width: 800px) {
+.frontside .card,
+.backside .card {
+  display: none;
+}
+}
+
+  @media only screen and (max-width: 600px){
+    #activity {
+      display: none;
+    }
+    }
+    
+   

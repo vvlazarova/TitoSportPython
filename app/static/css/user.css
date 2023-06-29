@@ -1,0 +1,77 @@
+html,
+body {
+  /* height: 100%; */
+  /* margin-top:20px;*/
+  background-image: url("football-field-488393.jpg"); 
+  /* background-color: url("c11.jpg"); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow-x: hidden; 
+}
+h2,
+h1,
+h5
+{
+  color: rgb(255, 255, 255);
+  line-height: 1.7em;
+}
+
+h3
+{
+  color: rgb(9, 1, 58);
+  line-height: 1.7em;
+  background-color: aliceblue;
+}
+
+#more {display: none;}
+
+.card {
+  background: #fff;
+  margin-bottom: 30px;
+ height: max-content;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+}
+.card .body {
+  color: #444;
+  padding: 20px;
+  font-weight: 400;
+ 
+  
+}
+.card .header {
+  color: #444;
+  padding: 20px;
+  position: relative;
+  box-shadow: none;
+}
+.single_post {
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease
+}
+
+.single_post .body {
+  padding: 30px
+}
+
+
+
+
+
+@media (max-width: 640px) {
+  .blog-page .left-box .single-comment-box>ul>li {
+      padding: 25px 0
+  }
+  .blog-page .left-box .single-comment-box ul li .icon-box {
+      display: inline-block
+  }
+  .blog-page .left-box .single-comment-box ul li .text-box {
+      display: block;
+      padding-left: 0;
+      margin-top: 10px
+  }
+
+  .blog-page .single_post .body,
+  .blog-page .single_post .footer {
+      padding: 30px
+  }
+}

@@ -1,0 +1,546 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <!-- 1st section -video -->
+    <br> 
+    <div class="description bg-light">
+    <header id="indexvideo">
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" >
+          <source src="static/video/athletes.mp4" type="video/mp4">
+        </video>
+        <div class="container h-100">
+          <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+              <br>
+              <br>
+              <h2 id="line1" >Welcome To TitoSport</h2> 
+              <br>
+
+              {% if login %}
+              <h2 cid="line1"><small>Let's get started </small></h2>
+              {% else %}
+              <h2>  <small> Alrady registered? </small> <a href="{{ url_for('login') }}">Login</a></h2>
+              {% endif %}
+
+<br><br>
+              <h1 class="display-3">Professional Training in Edinburgh</h1>
+
+              <br>
+                <h2 id="line2" class="lead mb-0"><br>
+                  I specialise in, preventing injuries, recovering professional athletes
+                  and supporting people from 11 to 111 years old to reach their goals.
+                  </h2>
+                  <br>
+                  <br>
+                  <a href="/contact/">
+                    <div id="line3" class="button first" >Book a free consultation</div>
+                  </a>
+            </div>
+          </div>
+        </div>
+      </header>
+       <!-- 2ed Section text  -->
+
+      <section class="my-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h2 style="text-align:center" class= "topic"><small>Who Needs a Strength and Conditioning Personal Training?</small></h2>
+              <hr>
+              </div>
+              </div>
+              </div>
+            </section>
+
+      <!--  cards -->
+
+      <div class="container" >
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="card" >
+        <div class="card-body">
+          <ul class="list">
+            <li >If you are an ATHLETE <br><br></li>
+            <li> If you are looking to improve your SPEED <br><br></li>
+            <li>If you are looking to improve your COORDINATION<br></li>
+            </ul>
+        </div>
+      </div>
+            </div>
+                  <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="card" >
+        <div class="card-body">
+          <ul class="list">
+          <li>If you are a young ATHLETE<br><br></li>
+          <li>If you are looking to improve your BALANCE<br><br></li>
+          <li>If you are looking to improve your strength and FLEXIBILITY<br></li>  
+          </ul>
+        </div>
+      </div>
+            </div>
+      
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card" >
+         <div class="card-body">
+          <ul class="list">
+          <li>If you are an amateur ATHLETE <br><br> </li>
+          <li>If you are looking to improve your AGILITY <br><br></li>
+          <li>If you're trying to increase your STAMINA<br></li>
+          </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+            <br>
+            <br>
+      </div> 
+    </div>
+          
+
+    <!-- 3ed section - about-->
+
+<!-- <div class="description bg-light"> -->
+ <div class="container py-3">
+   <br>
+   <br>
+    <!-- Card Start -->
+  <div class="cards">
+    <div class="row ">
+      <div class="col-md-7 px-3">
+        <div class="card-block px-6">
+          <h3 class="card-title"><b>Hi, I am Tito</b> </h3>
+            <br>
+           <!-- <h3 >My name is Stoil, but you can call me Tito.</h3><br> -->
+           <h2 class="text-success" ><small>I can help you to improve your Performance!</small></h2 >
+           <p> I am based in Edinburgh and I specialize in strength and conditioning training for sports, with ten years of experience in this field.
+             If you are looking for variety in your training, if you want to improve your immune system and prevent injuries, 
+             or if you’re looking for a way to recover from an injury and get in optimal shape, I can help.
+              If you want to improve your physical qualities of speed, strength and endurance, 
+              then let me introduce you to my techniques and they will help you achieve your goals.
+               I offer professional fitness training carefully tailored to individual requirements, ability and age group.
+               <br>
+              <u> Book for a £35 per session or a block of 8 sessions for £206 (One session lasts at least one hour).
+                Up to 50% discount on a group bookings.</u><a href="/about/"> <b><i>Learn more about me</i></b></a><br></p>
+               
+            <br>
+          </div>
+      </div>
+
+      <!-- Carousel start -->
+      <div class="col-md-5 ">
+        <img class="d-block" src="static/photos/home/a3.jpg"  width="580" height="510"  alt="Stoil">
+          </div>
+        </div>
+      </div>
+      <!-- End of carousel -->
+    </div>
+    <br>
+    <br>
+    <br>
+  <!-- </div> -->
+  <!-- End of card -->
+
+      
+    <!-- 4th Section How it works  -->
+  
+       <div class="blue">
+        <div class="col-md-12 mx-auto">
+          <br>
+          <br>
+          <h3 class= "topic" style="text-align:center">How it works :</h3>
+          <hr id="blue">
+          <br>
+          </div>
+        
+      <div class="container">
+              <div class="row">
+               
+                <div class="col-md-6 col-sm-12">
+                  <h4 class="list"> <a href=" /index/ #footer" style="color:#07004D"><u>1. Book your appointment by sending me a short message about yourself. </u> </a> </h4>
+                  <h4 class="list"> 2. We will arrange a free half-hour preliminary consultation for you. </h4>
+                  <h4 class="list"> 3. We will meet in your local Park in Edinburgh or any EL gym (gym visit not included in the price). </h4>
+                    <h4 class="list"> 4.Following the initial full consultation, I will develop a fitness programme for you to follow. </h4>
+                      <h4 class="list"> 5. It's time to work towards your goals. </h4>  
+                      <br>
+                      <br>
+                      <br>
+                    </div>
+                     <div class="col-md-6 col-sm-6">
+                      <div class="wrapper" >
+                        <span id="image" data-tilt>
+                          <img id="background" src="static/photos/home/234.png"  width="450" height="420"  alt="graphic of action">
+                        </span>
+                      </div>
+                <br>
+                <br>
+                <br>
+                </div>
+                </div>
+        </div>
+                 
+ </div>
+                  <br>
+                  <br>
+
+                         <!-- 5th Section - services  -->
+       <!-- Athletes  -->
+       <div class="description ">
+    <div class="container">
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-6 col-sm-6 flip-card">
+          <br>
+          <br>
+          <div class="boxing">
+            <img class="img-responsive" src="static/photos/home/a10.jpg" alt="stretching" />
+            <div class="box-content">
+              <div class="content">
+                <h3 class="title">Message me to book an appointment</h3>
+                <h4 class="title">Half hour FREE consultation available now</h4>
+                <span class="post">
+                  One-to-One training for <b>£35 an hour</b> and up to <b>50% </b>DISCOUNT on a group bookings </span
+                >
+                <ul class="icon">
+                  <li>
+                    <a href=" /contact/ #contact"><i class="fa fa-phone"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/TitoSportUK"
+                      ><i class="fa fa-facebook-f"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <br>
+          <br>
+          <h4>Strength and conditioning for Athletes <br /></h4>
+          <h5 class="text-success">Individual training for advances and professionals</h5>
+          <br>
+          <p>
+            To be a professional athlete, firstly you need discipline, to be skilled you need consistency and determination,
+             and to be in condition you need training. When we meet I will assess your needs and develop a personal plan to help you achieve your goals. 
+            I can help you become stronger and faster, with improved endurance, coordination, and flexibility. 
+            <a href="/athletes/"><b>Learn more about the training.</b></a>
+          </p>
+          <br>
+          <a href="/index/ #footer">
+            <div class="button">
+              <p id="button1" class="second">Book now</p>
+            </div></a
+          >
+        </div>
+      </div>
+      <br /><br />
+      <br>
+    </div>
+    </div>
+
+ <!-- Everyone  -->
+ <div class="text-bg-light p-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <br>
+            <br>
+            <h4><br>Complex Training: Strength and Conditioning for EVERYONE</h4>
+           <h5 class="text-success"> Put your trainers on and come along.</h5> <br>
+                      <p>I can help you to improve your JOINT HEALTH and MOBILITY as well as help you to increase your PHYSICAL CAPABILITIES and keep your SPINE HEALTHY and happy. 
+                        I have created many successful WEIGHT LOSS programs and can help you to improve your general health in day-to-day life. 
+<a href="/training/"><b>Learn more about my services.</b></a>
+             
+            </p>
+            <a href="/ #footer">
+              <div class="button">
+                <p id ="button2" class="second">Book now</p>
+              </div></a
+            >
+            <br /><br />
+          </div>
+          <div class="col-md-6 col-sm-6 flip-card">
+            <br>
+            <br>
+            <div class="boxing">
+              <br /><br />
+              <img class="img-responsive" src="static/photos/home/a9.jpg" alt="jumping" />
+              <div class="box-content">
+                <div class="content">
+                  <h3 class="title">Message me to book an appointment</h3>
+                <h4 class="title">Half hour FREE consultation available now</h4>
+                <span class="post">
+                  One-to-One training for <b>£35 an hour</b> and up to <b>50% </b>DISCOUNT on a group bookings </span
+                >
+                <ul class="icon">
+                  <li>
+                    <a href="/ #footer"><i class="fa fa-phone"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/messages/t/100205548772912"
+                      ><i class="fa fa-facebook-f"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br /><br />
+        <br>
+      </div>
+    </div>
+ <!-- Recovery  -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 flip-card">
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="boxing">
+            <img class="img-responsive" src="static/photos/home/a13.jpg" alt="recovery" />
+            <div class="box-content">
+              <div class="content">
+                <h3 class="title">Message me to book an appointment</h3>
+                <h4 class="title">Half hour FREE consultation available now</h4>
+                <span class="post">
+                  One-to-One training for <b>£35 an hour</b> and up to <b>50% </b>DISCOUNT on a group bookings </span
+                >
+                <ul class="icon">
+                  <li>
+                    <a href="/ #footer"><i class="fa fa-phone"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/TitoSportUK"
+                      ><i class="fa fa-facebook-f"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <br>
+          <br>
+          <br>
+          <br>
+          <h4>Post recovery training <br /></h4>
+          <h5 class="text-success">Let's talk about recovery!</h5>
+          <br>
+          <p> If you are an athlete or sport is part of your life, there is always a risk of injury.
+             I can help you to get back to sport and be at your best again. <br>
+            <i>Everyday strength and conditioning can PREVENT INJURY. </i></p>
+            <p><i><b>Always consult with a doctor before starting your recovery training.</b></i> <br>
+            <a href="/about.html #injury"><b>Learn more about post recovery training.</b></a>
+          </p>
+          <br>
+
+          <a href="/ #footer">
+            <div class="button">
+              <p id="button3" class="second">Book now</p>
+            </div></a
+          >
+        </div>
+      </div>
+      <br /><br />
+      <br>
+      <br>
+    </div>
+   
+
+ <!-- Junior -->
+ <div class="description bg-light">
+      <div class="container">
+        <br>
+        <br>
+        <div class="row"> 
+          <div class="col-md-6 col-sm-6">
+            <h4>
+              <br />Strength and Conditioning for Juniors<br>
+            </h4>
+           <h5 class="text-success"> Should young adults do strength training?</h5><br>
+            <p>
+              <b>Yes!</b> It's vital, during adolescence, to pay attention to the body and how it develops. I have helped many young adults to get 
+              back to sport after injuries as well as worked with many kids that need that extra help to improve their JOINT HEALTH or to lose weight.<br>
+              Improving the physical activity of adolescents, building habits for correct posture and gait, building habits to take care of their health through exercise
+              <a href="/training/"><b>Learn more about Junior training.</b></a>
+             
+            </p>
+            <a href="/ #footer">
+              <div class="button">
+                <p id ="button4" class="second">Book now</p>
+              </div></a
+            >
+            <br /><br />
+          </div>
+          <div class="col-md-6 col-sm-6 flip-card">
+            <div class="boxing">
+              <br /><br />
+              <img class="img-responsive" src="static/photos/home/a12.jpg" alt="kids" />
+              <div class="box-content">
+                <div class="content">
+                  <h3 class="title">Message me to book an appointment</h3>
+                <h4 class="title">Half hour FREE consultation available now</h4>
+                <span class="post">
+                  One-to-One training for <b>£35 an hour</b> and up to <b>50% </b>DISCOUNT on a group bookings </span
+                >
+                <ul class="icon">
+                  <li>
+                    <a href="/contact/ #contact"><i class="fa fa-phone"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/TitoSportUK"
+                      ><i class="fa fa-facebook-f"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br>
+        <br>
+      </div>
+    </div>
+      
+      
+      <!--6th section - Carousel -->  
+      
+    
+        <br>
+        <br>
+
+        <div class="container-xl">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="greenhr" >What people say...</h2>
+              <div id="myCarousel" class="carousel slide" data-ride="carousel" style="min-height: 350px">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                  <li data-target="#myCarousel" data-slide-to="3"></li>
+                  <li data-target="#myCarousel" data-slide-to="4"></li>
+                  <li data-target="#myCarousel" data-slide-to="5"></li>
+                  <li data-target="#myCarousel" data-slide-to="6"></li>
+                  <li data-target="#myCarousel" data-slide-to="7"></li>
+                </ol>   
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="img-box"><img src="static/photos/konstantinIvanov.jpg" alt="konstantin"></div>
+                    <p class="testimonial">  I met Stoil 3 years ago. He was helping me to recover after an injury.
+                      Training with him taught me to be serious about what I do and not to give up.
+                      As well as that I learned I lot about my body and the best methods in a specific exercise.
+                      I like the training with him mostly because it always felt right for me, he has a very professional attitude and individual approach.
+                      I am an ex Footballer, 20 years old studying to be a football coach now.</p>
+                    <p class="overview"><b>Konstantin</b>, Footballer</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="img-box"><img src="static/photos/alexander.jpg" alt="alexander"></div>
+                    <p class="testimonial"> I met Stoil 3 years ago. He was helping me to recover after an injury.
+                      Training with him taught me to be serious about what I do and not to give up.
+                      As well as that I learned I lot about my body and the best methods in a specific exercise.
+                      I like the training with him mostly because it always felt right for me, he has a very professional attitude and individual approach.
+                      I am an ex Footballer, 20 years old studying to be a football coach now.</p>
+                    <p class="overview"><b>Alexander</b>, Student</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="img-box"><img  src="static/photos/tia.jpg" alt="tia"></div>
+                    <p class="testimonial">The training with Stoil was not just physical work but mental as well.
+                      The lessons were challenging at first as it was a completely new experience for me.
+                      I didn’t feel confident in the water and Stoil has helped me to overcome that.
+                      Now I am a lot more confident and calm in the water.
+                      I believe that going through this challenge has also increased my general self confidence in life.</p>
+                    <p class="overview"><b>Tia</b></p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="img-box"><img src="static/photos/danibohotska.jpg" alt="dani"></div>
+                    <p class="testimonial">A few years ago I met Stoil at the pool. Back then he was an aqua fit coach.
+                      He has always been very professional and his positive attitude has often made my day.
+                      </p>
+                    <p class="overview"><b>Dani</b></p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="img-box"><img  src="static/photos/maq.jpg" alt="maq"></div>
+                    <p class="testimonial">I have known Stoil for several years now.
+                      He has taught me the value of consistency.
+                      
+                      </p>
+                    <p class="overview"><b>Maya</b>, Digital Business Development Expert</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="img-box"><img src="static/photos/pavlin.jpg" alt="pavlin"></div>
+                    <p class="testimonial">My name is Pavlin and I am Stoil’s brother.
+                      As a big brother he has always tried to set me a good example.
+                      He has passed on his love of sport to me.
+                      Over the years I have learned a lot of different exercises and how to correctly perform them as well as techniques to recover from injuries. 
+                      One of the most valuable lessons I have learned from him is what not to do, because not every exercise is good for my health.
+                      </p>
+                    <p class="overview"><b>Pavlin</b>, Electrical engineer</p>
+                  </div>
+                  <div class="carousel-item">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div><span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span></div>
+                      <br>
+                      <br>
+                    <p class="testimonial">Stoil used to be a water aerobics instructor at the pool where I worked out.
+                      The water aerobics classes with Stoil were great! We had a lot of fun and positive emotions in the water and it has always been a good and challenging workout.
+                      </p>
+                    <p class="overview"><b>Cveta Peichinova</b>, Clinical Research</p>
+                  </div>
+                  <div class="carousel-item">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div> <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span></div>
+                      <br>
+                      <br>
+                    <p class="testimonial">I met Stoil in 2013. Training with him was always fun! 
+                      He put a lot of effort into preparing for each session by setting a new combination of exercises each time and making sure that I progress towards my goals.
+                      </p>
+                    <p class="overview"><b>GK</b>, IT Specialist</p>
+                  </div>
+                </div>
+                <!-- Carousel controls -->
+                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev" >
+                  <i class="fa fa-angle-left"></i>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                  <i class="fa fa-angle-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        </div>
+     
+        {% endblock %}

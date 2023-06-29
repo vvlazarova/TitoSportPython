@@ -1,0 +1,57 @@
+ <!-- Navigation -->
+
+   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-lg-0">
+
+ 
+   <a class="navbar-brand" href="/">
+      <img src="static/logo/logogreen.png" width="220" height="70" alt="Tito Sport logo" />
+     <br />
+   </a>
+   
+   <button
+     class="navbar-toggler"
+     type="button"
+     data-toggle="collapse"
+     data-target="#navbarResponsive"
+     aria-controls="navbarResponsive"
+     aria-expanded="false"
+     aria-label="Toggle navigation"
+   >
+     <span class="navbar-toggler-icon">
+       <i class="fas fa-bars" style="color:rgb(216, 210, 210); font-size:28px;"></i>
+     </span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarResponsive">
+     <ul class="navbar-nav ml-auto">
+      <li class="nav-item {% if index %}active_nav{% endif %} ">
+         <a class="nav-link"  href="{{ url_for('index') }}"><i class="fa fa-fw fa-home"></i>Home <span class="sr-only">(current)
+ </span> </a>
+       </li>
+        
+<!-- Dropdown -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    <i class="fa fa-fw fa-users"></i> Services
+  </a>
+  <div class="dropdown-menu">
+    <!-- Dropdown menu items -->
+     <a class="dropdown-item" href="{{ url_for('athletes') }}" style="color:white">Athletes</a>
+     <a class="dropdown-item" href="{{ url_for('training') }}" style="color:white">Personal Training</a>
+     <a class="dropdown-item" href="{{ url_for('junior') }}" style="color:white">Junior Sports</a>
+   </div>
+   </li>
+<!-- DropdownEnd -->
+
+ <li class="nav-item {% if about %}active_nav{% endif %} ">
+     <a class="nav-link" href= "{{ url_for('about') }}" ><i class="fa fa-fw fa-info"></i>About</a>
+     </li>
+ <li class="nav-item" {% if login %}active_nav{% endif %}>
+
+         <a class="nav-link" href= "{{ url_for('login') }}"><i class="fa fa-sign-in"></i>Login</a>
+       </li>
+     
+     </ul>
+   </div>
+ </nav>
+
+             <!-- Navigation END -->   

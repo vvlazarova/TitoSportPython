@@ -1,6 +1,8 @@
 from application import app, db
-from flask import render_template
+from flask import render_template, request, json, Response, redirect, flash
 from application.models import User
+from application.forms import LoginForm, RegisterForm
+
 @app.route("/")
 @app.route("/index")
 @app.route("/home")
@@ -19,13 +21,24 @@ def training():
 def junior():
     return render_template("junior.html", junior=True)
 
-@app.route("/about/")
+@app.route("/about")
 def about():
-    return render_template("about.html", about=True)
+    return render_template("about.html", junior=True)
 
-@app.route("/login")
+@app.route("/login", methods=['GET', 'POST'])
 def login():
-    return render_template("login.html", login=True )
+    form = LoginForm()
+    if form.validate_on_submit():
+        if form.email.data == "test@uta.com":
+            flash("You are successfully logged in!", "success")
+            return redirect("/index")
+        else:
+            flash("Incorrect email address", "error")
+    return render_template("login.html", title="Login", form=form)
+
+@app.route("/register") 
+def register():
+    return render_template("register.html", register=True )
 
 
 @app.route("/api/")

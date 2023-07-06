@@ -28,11 +28,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TW3B8E7EN6"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-TW3B8E7EN6');
+</script>
+
+<!-- Add Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Add Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Carousel Gallery -->
+
+<link rel="stylesheet" href="//cdn.materialdesignicons.com/2.1.99/css/materialdesignicons.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+
+
 </head>
 
 <!-- Content -->
 <body>
-  {% include "includes/navbar.html" %}    
+  
+  {% include "includes/navbar.html" %}   
+  
+  {% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<div class = "alert alert-danger">
+<p>{{ message }}</p>
+</div>
+{% endfor %}
+{% endif %}
+  {% endwith %}
 
   {% block content %}
 
@@ -41,6 +79,92 @@
   <!-- Footer -->
   {% include "includes/footer.html" %}
 
+
+
+  <script>
+
+    // Function to hide the pop-up
+    function hidePopup() {
+      const popupContainer = document.querySelector(".popup-container");
+      popupContainer.style.display = "none";
+    }
+
+    // Attach event listener to the close button
+    const closeButton = document.getElementById("closeButton");
+    closeButton.addEventListener("click", hidePopup);
+  </script>
+<!--END-->
+
+ <!--Script Typing Carousel-->
+
+ <script>
+  //Typing Carousel
+var TxtRotate = function(el, toRotate, period) {
+this.toRotate = toRotate;
+this.el = el;
+this.loopNum = 0;
+this.period = parseInt(period, 10) || 2000;
+this.txt = '';
+this.tick();
+this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+var i = this.loopNum % this.toRotate.length;
+var fullTxt = this.toRotate[i];
+
+if (this.isDeleting) {
+  this.txt = fullTxt.substring(0, this.txt.length - 1);
+} else {
+  this.txt = fullTxt.substring(0, this.txt.length + 1);
+}
+
+this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+var that = this;
+var delta = 300 - Math.random() * 100;
+
+if (this.isDeleting) { delta /= 2; }
+
+if (!this.isDeleting && this.txt === fullTxt) {
+  delta = this.period;
+  this.isDeleting = true;
+} else if (this.isDeleting && this.txt === '') {
+  this.isDeleting = false;
+  this.loopNum++;
+  delta = 500;
+}
+
+setTimeout(function() {
+  that.tick();
+}, delta);
+};
+
+window.onload = function() {
+var elements = document.getElementsByClassName('txt-rotate');
+for (var i=0; i<elements.length; i++) {
+  var toRotate = elements[i].getAttribute('data-rotate');
+  var period = elements[i].getAttribute('data-period');
+  if (toRotate) {
+    new TxtRotate(elements[i], JSON.parse(toRotate), period);
+  }
+}
+// INJECT CSS
+var css = document.createElement("style");
+css.type = "text/css";
+css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+document.body.appendChild(css);
+};
+</script>
+
+
+
+
+
+
+
+
+
   <!-- Scripts -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js'></script>
@@ -48,3 +172,5 @@
 <script src="./script.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ...">
 </script>
+
+

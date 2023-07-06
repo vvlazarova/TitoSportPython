@@ -7,7 +7,28 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
+    /* Styles for the pop-up window */
+    .popup-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      z-index: 9999; /* Ensure the pop-up stays on top of other elements */
+    }
 
+    .popup {
+      width: 300px;
+      padding: 20px;
+      background-color: #240d5d;
+      border: 1px solid #550606;
+      border-radius: 5px;
+    }
+  
 /*description and font*/
 
 .single-about{
@@ -127,10 +148,43 @@ a:hover {
 
 /*clasess*/
 
-.first1 {
+/*Login*/
+
+.login {
   color: white;
-    font-size: 1.5rem;
 }
+
+.form-background {
+  background-color: #172042;
+  padding: 60px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+    .error-message.error {
+        color: red;
+    }
+    .form-title {
+      color: white;
+      font-style: bold;
+  }
+
+
+.form-control {
+  border-radius: 20px;
+}
+
+.rounded-lg {
+  border-radius: 20px;
+}
+
+/*LoginEnd*/
+
 
 .first {
   color: white;

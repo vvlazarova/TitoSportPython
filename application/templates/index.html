@@ -1,6 +1,23 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
+  <!-- Pop-up container -->
+
+  <div class="popup-container">
+    <div class="popup">
+
+      {% if login %}
+      <h2 cid="line1"><small>Let's get started </small></h2>
+      {% else %}
+      <h2>  <small> Alrady registered? </small> <a href="{{ url_for('login') }}">Login</a></h2>
+      {% endif %}
+
+<br><br>
+      <button id="closeButton">Close</button>
+    </div>
+  </div>
+
     <!-- 1st section -video -->
     <br> 
     <div class="description bg-light">
@@ -16,14 +33,6 @@
               <br>
               <h2 id="line1" >Welcome To TitoSport</h2> 
               <br>
-
-              {% if login %}
-              <h2 cid="line1"><small>Let's get started </small></h2>
-              {% else %}
-              <h2>  <small> Alrady registered? </small> <a href="{{ url_for('login') }}">Login</a></h2>
-              {% endif %}
-
-<br><br>
               <h1 class="display-3">Professional Training in Edinburgh</h1>
 
               <br>

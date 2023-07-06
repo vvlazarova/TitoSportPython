@@ -1,3 +1,4 @@
+
 //carousel-gallery
 
 $(function(){
@@ -50,3 +51,4 @@ $(document).ready(function() {
     reset: false
  });
 });
+

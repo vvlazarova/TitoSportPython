@@ -45,14 +45,29 @@
  <li class="nav-item {% if about %}active_nav{% endif %} ">
      <a class="nav-link" href= "{{ url_for('about') }}" ><i class="fa fa-fw fa-info"></i>About</a>
      </li>
-
- <li class="nav-item {% if login %}active_nav{% endif %}">
+     {% if not session['username'] %}
+ <li class="nav-item">
          <a class="nav-link" href= "{{ url_for('login') }}"><i class="fa fa-sign-in"></i>Login</a>
        </li>
-     
-       <li class="nav-item {% if register %}active_nav{% endif %}">
+{% else %}
+       <li class="nav-item">
+        <a class="nav-link" href= "{{ url_for('logout') }}"><i class="fa fa-sign-out"></i>Logout</a>
+      </li>
+      {% endif %}
+
+     {% if not session['username'] %}
+       <li class="nav-item">
         <a class="nav-link" href= "{{ url_for('register') }}"><i class="fas fa-user-alt"></i>Register</a>
       </li>
+      {% else %}
+
+      <li class="nav-item">
+        <a class="nav-link" href= "{{ url_for('user') }}"><i class="fas fa-user-alt"></i>My account</a>
+       </li>
+
+{% endif %}
+
+
 
      </ul>
    </div>

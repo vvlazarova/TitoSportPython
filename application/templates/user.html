@@ -1,22 +1,21 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<br><br><br><br>
 
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <br><br><br>
-            {% for user in users %}
+<div class="row">
+    <div class="col-md-12 text-center">
+
+        {% if user %}
             <dl style="color: white; background-color: rgb(6, 6, 88);">
-                <dt>User ID: {{ user.user_id}}</dt>
-                <dd>Email: {{user.email}}</dd>
-                <dd>Password: {{user.password}}</dd>
+                <dt>User ID: {{ user.user_id }}</dt>
+                <dd>Email: {{ user.email }}</dd>
+                <dd>Password: {{ user.password }}</dd>
             </dl>
-            {% else %}
-
-            <h3 style="color: white;">No users yet!</h3>
-
-            {% endfor %}
-
-        </div>
+        {% else %}
+            <h3 style="color: white;">User not found!</h3>
+        {% endif %}
     </div>
+</div>
+<br><br><br><br><br><br><br><br>
 {% endblock %}

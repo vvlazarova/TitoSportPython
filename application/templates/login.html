@@ -1,4 +1,5 @@
-<br><br><br> {% extends "layout.html" %}
+<br><br><br> 
+{% extends "layout.html" %}
 
 {% block content %}
 
@@ -8,13 +9,22 @@
         <h3></h3>
         <div class="form-wrapper">
             <div class="form-background">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul class="flashes">
+                            {% for message in messages %}
+                                <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
                 <form name="login" action="" method="post" novalidate>
                     <fieldset class="form-group">
                         <legend class="form-title">{{ title }}</legend> 
                         {{ form.hidden_tag() }}
 
                         <p class="form-group">
-                            {{ form.email.label(class="login") }}<br>
+                           {{ form.email.label(class="login") }}<br>
                             {{ form.email(class="form-control rounded-lg", size=35) }}
                             {% for error in form.email.errors %}
                                 <span class="error-message error">{{ error }}</span>
@@ -27,7 +37,7 @@
                                 <span class="error-message error">{{ error }}</span>
                             {% endfor %}
                         </p>
-
+                        <br>
                         <p class="form-group">
                             {{ form.submit(class="button") }}
                         </p>

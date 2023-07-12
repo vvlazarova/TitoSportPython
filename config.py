@@ -1,6 +1,6 @@
 import os
 
 class Config(object):
-    SECRET_KEY = os.environ.get('SECRET_KEY') or b'6\xe9\xda\xead\x81\xf7\x8d\xbbH\x87\xe8m\xdd3%'
+    SECRET_KEY = os.environ.get('SECRET_KEY') or b'\xa5\xf0\x15_\x8d\xbfn\xd0\xce\x12\x07\xa3\xa0\xcet\xc6'
 
     MONGODB_SETTINGS = { 'db' : 'Users' }

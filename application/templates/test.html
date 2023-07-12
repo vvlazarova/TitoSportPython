@@ -1,0 +1,34 @@
+@app.route("/login", methods=['GET','POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        if request.form.get("email") == "test@violeta.com":
+            flash("Violeta, you are successfully logged in!", "success")
+            return redirect("/welcome")
+        else:
+            flash("Sorry, something went wrong.","danger")
+    return render_template("login.html", title="Login", form=form, login=True )
+
+
+    {% extends "layout.html" %}
+
+{% block content %}
+<br><br><br><br><br><br>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <br><br><br>
+            {% for user in users %}
+            <dl style="color: white; background-color: rgb(6, 6, 88);">
+                <dt>User ID: {{ user.user_id}}</dt>
+                <dd>Email: {{user.email}}</dd>
+                <dd>Password: {{user.password}}</dd>
+            </dl>
+            {% else %}
+
+            <h3 style="color: white;">No users yet!</h3>
+
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

@@ -28,7 +28,12 @@
       border: 1px solid #550606;
       border-radius: 5px;
     }
-  
+    .flashes {
+      background-color: #7FFF00; /* Set your desired background color */
+      color: #000000; /* Set the text color */
+      padding: 10px;
+      margin-bottom: 10px;
+    }
 /*description and font*/
 
 .single-about{
@@ -156,9 +161,10 @@ a:hover {
 
 .form-background {
   background-color: #172042;
-  padding: 60px;
+  padding: 50px 140px;
+  border-radius: 50px 20px;
+  box-shadow: 0px 17px 10px -10px rgba(43, 123, 35, 0.4);
 }
-
 .form-wrapper {
   display: flex;
   justify-content: center;
@@ -171,9 +177,7 @@ a:hover {
     }
     .form-title {
       color: white;
-      font-style: bold;
   }
-
 
 .form-control {
   border-radius: 20px;

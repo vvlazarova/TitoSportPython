@@ -1,3 +1,8 @@
+# File: forms.py
+# Author: Violeta Lazarova
+# Description: This file defines the FlaskForm classes for the login and registration forms.
+# It includes form fields, validators, and custom validation methods.
+
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Email, Length, EqualTo, ValidationError

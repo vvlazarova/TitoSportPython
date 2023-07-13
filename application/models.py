@@ -1,3 +1,9 @@
+# File: models.py
+# Author: Violeta Lazarova
+# Description: This file defines the User model for the TitoSport application.
+# It includes fields for user information and methods for password management.
+
+
 import flask
 from application import db
 from werkzeug.security import generate_password_hash, check_password_hash

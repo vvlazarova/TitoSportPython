@@ -1,4 +1,11 @@
- <!-- Navigation -->
+<!-- 
+File: navbar.html
+Author: Violeta Lazarova
+Description: This file contains the navigation bar template for the TitoSport application.
+It includes the branding logo, menu items, and dropdown menu.
+The active navigation item is highlighted based on the current page. 
+It also displays login and registration options, and the user's name if logged in.
+-->
 
    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-lg-0">
 
@@ -61,13 +68,11 @@
       </li>
       {% else %}
 
-      <li class="nav-item">
-        <a class="nav-link" href= "{{ url_for('user') }}"><i class="fas fa-user-alt"></i>My account</a>
-       </li>
-
-{% endif %}
-
-
+<li class="nav-item">
+  <!-- Welcome user -->
+  <a class="nav-link" href= "{{ url_for('user') }}"><i class="fas fa-user-alt"></i>Welcome,{{ session['username'] }}</a>
+</li>
+  {% endif %}
 
      </ul>
    </div>

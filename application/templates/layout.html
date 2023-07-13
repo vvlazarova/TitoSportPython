@@ -1,3 +1,12 @@
+<!--
+File: layout.html
+Author: Violeta Lazarova
+Description: This file contains the layout template for the TitoSport application. 
+It includes the common elements used across multiple pages, 
+such as the HTML head section with CSS and JavaScript links, navigation bar,
+flash messages display, content block, and footer.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,8 +69,10 @@ gtag('config', 'G-TW3B8E7EN6');
 <!-- Content -->
 <body>
   
-  {% include "includes/navbar.html" %}   
+  {% include "includes/navbar.html" %}
   
+
+
   {% with messages = get_flashed_messages() %}
 {% if messages %}
 {% for message in messages %}

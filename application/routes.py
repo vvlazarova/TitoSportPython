@@ -1,34 +1,23 @@
-from application import app, db
-from flask import render_template,json, Response,request, redirect, flash, url_for, session
+# File: routes.py
+# Author: Violeta Lazarova
+# Description: This file defines the routes and corresponding view functions for the TitoSport application.
+# It includes routes for index, athletes, training, junior, about, login, user, logout, register,
+# and a test route for MongoDB connection.
+
+from application import app
+from flask import render_template, redirect, flash, url_for, session
 from application.models import User
 from application.forms import LoginForm, RegisterForm
-from pymongo import MongoClient
-
-
-# Connect to MongoDB
-client = MongoClient('mongodb://localhost:27017')
-
-# Access  database
-db = client['Users']
-
-# Access collection
-collection = db['user']
-
-
 
 @app.route("/")
 @app.route("/index")
 @app.route("/home")
 def index():
-    return render_template("index.html" , index=True)
+    return render_template("index.html", index=True)
 
 @app.route("/athletes")
 def athletes():
     return render_template("athletes.html", athletes=True)
-
-@app.route("/welcome")
-def welcome ():
-    return render_template("welcome.html", athletes=True)
 
 @app.route("/training")
 def training():
@@ -67,7 +56,7 @@ def login():
 def user():
     if not session.get('username'):
         return redirect(url_for('login'))
-    
+
     if 'username' in session:
         flash(session['username'] + ", you are successfully logged in!", "success")
         user_id = session['user_id']
@@ -80,77 +69,33 @@ def user():
     else:
         return redirect(url_for('login'))
 
-
-
 @app.route("/logout")
 def logout():
-    session['user_id']=False
-    session.pop('username',None)
+    session['user_id'] = False
+    session.pop('username', None)
     return redirect(url_for('index'))
 
-
-@app.route("/register", methods=['POST','GET'])
+@app.route("/register", methods=['POST', 'GET'])
 def register():
     if session.get('username'):
         return redirect(url_for('user'))
     form = RegisterForm()
     if form.validate_on_submit():
-        user_id     = User.objects.count()
-        user_id     += 1
+        email = form.email.data
+        password = form.password.data
+        first_name = form.first_name.data
+        last_name = form.last_name.data
 
-        email       = form.email.data
-        password    = form.password.data
-        first_name  = form.first_name.data
-        last_name   = form.last_name.data
+        # Generate a unique user_id
+        user_count = User.objects.count()
+        user_id = user_count + 1
 
         user = User(user_id=user_id, email=email, first_name=first_name, last_name=last_name)
         user.set_password(password)
         user.save()
-        flash("You are successfully registered!","success")
-        return redirect(url_for('welcome'))
+        flash("You are successfully registered!", "success")
+        return redirect(url_for('login'))  # Redirect to the 'login' route
     return render_template("register.html", title="Register", form=form, register=True)
 
-
-
-# Route for testing MongoDB connection
-@app.route("/test-db")
-def test_mongodb():
-    # Connect to MongoDB
-    client = MongoClient('mongodb://localhost:27017')
-
-    # Access the database
-    db = client['Users']
-
-    # Access a collection
-    collection = db['user']
-
-    # Test the connection
-    documents = collection.find()
-    output = ""
-    for document in documents:
-        output += str(document) + "<br>"
-
-    return output
-
-# Your other Flask routes and code can follow
-
-# Run the Flask application
 if __name__ == "__main__":
     app.run()
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-   

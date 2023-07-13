@@ -1,4 +1,12 @@
-<br><br><br> 
+<!--
+File: login.html
+Author: Violeta Lazarova
+Description: This file contains the login page template for the TitoSport application.
+It renders a form allowing users to log in with their email and password.
+ It also displays any flash messages related to login success or failure.
+-->
+
+<br><br><br>
 {% extends "layout.html" %}
 
 {% block content %}
@@ -9,6 +17,7 @@
         <h3></h3>
         <div class="form-wrapper">
             <div class="form-background">
+                <!-- Flash Messages -->
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
                         <ul class="flashes">
@@ -18,27 +27,38 @@
                         </ul>
                     {% endif %}
                 {% endwith %}
+
+                <!-- Login Form -->
                 <form name="login" action="" method="post" novalidate>
                     <fieldset class="form-group">
                         <legend class="form-title">{{ title }}</legend> 
                         {{ form.hidden_tag() }}
 
+                        <!-- Email Field -->
                         <p class="form-group">
-                           {{ form.email.label(class="login") }}<br>
+                            <!-- Email Label -->
+                            {{ form.email.label(class="login") }}<br>
+                            <!-- Email Input -->
                             {{ form.email(class="form-control rounded-lg", size=35) }}
                             {% for error in form.email.errors %}
                                 <span class="error-message error">{{ error }}</span>
                             {% endfor %}
                         </p>
+
+                        <!-- Password Field -->
                         <p class="form-group">
+                            <!-- Password Label -->
                             {{ form.password.label(class="login") }}<br>
+                            <!-- Password Input -->
                             {{ form.password(class="form-control rounded-lg", size=15) }}
                             {% for error in form.password.errors %}
                                 <span class="error-message error">{{ error }}</span>
                             {% endfor %}
                         </p>
+
                         <br>
                         <p class="form-group">
+                            <!-- Submit Button -->
                             {{ form.submit(class="button") }}
                         </p>
                     </fieldset>
@@ -49,3 +69,4 @@
 </div>
 
 {% endblock %}
+

@@ -1,4 +1,8 @@
-  body {
+ /* File: style.css */
+/* Author: Violeta Lazarova */
+/* Description: This file contains the CSS styles for the TitoSport application */
+ 
+ body {
   line-height: 1.7;
   font-weight: 300;
   font-size: 1.1rem;
@@ -29,11 +33,11 @@
       border-radius: 5px;
     }
     .flashes {
-      background-color: #7FFF00; /* Set your desired background color */
-      color: #000000; /* Set the text color */
+      color: #ed0707; /* Set the text color */
       padding: 10px;
       margin-bottom: 10px;
     }
+
 /*description and font*/
 
 .single-about{

@@ -1,5 +1,8 @@
-# This file must be used with "source bin/activate" *from bash*
-# you cannot run it directly
+# File: activate
+# Author: Violeta Lazarova
+# Description: This script must be used with "source bin/activate" from bash.
+# It cannot be run directly.
+# It sets up the environment variables for the virtual environment.
 
 deactivate () {
     # reset old environment variables
